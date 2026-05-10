@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 목운초 아버지회 가족 워크샵</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 10px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .section {
+            padding: 25px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "📌";
+            margin-right: 8px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #495057;
+            min-width: 80px;
+        }
+        
+        .info-value {
+            color: #212529;
+            flex: 1;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+        
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .schedule {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 15px;
+        }
+        
+        .schedule h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .time-slot {
+            padding: 8px 0;
+            border-bottom: 1px dashed #dee2e6;
+        }
+        
+        .time-slot:last-child {
+            border-bottom: none;
+        }
+        
+        .time {
+            font-weight: bold;
+            color: #667eea;
+            display: inline-block;
+            min-width: 60px;
+        }
+        
+        .activity {
+            color: #495057;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .warning-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .warning-text {
+            color: #856404;
+            font-size: 14px;
+        }
+        
+        .danger {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .danger-title {
+            font-weight: bold;
+            color: #721c24;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .danger-text {
+            color: #721c24;
+            font-size: 14px;
+        }
+        
+        .contact-list {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item {
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-name {
+            font-weight: bold;
+            color: #0056b3;
+            margin-bottom: 5px;
+        }
+        
+        .contact-phone {
+            color: #495057;
+            font-size: 14px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .team-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .team-count {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        
+        .team-leader {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .leader-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 4px;
+        }
+        
+        .leader-info {
+            font-weight: bold;
+            color: #212529;
+        }
+        
+        .team-members {
+            margin-bottom: 10px;
+        }
+        
+        .member-item {
+            padding: 5px 0;
+            color: #495057;
+            font-size: 14px;
+        }
+        
+        .team-tasks {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .task-item {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        .task-item::before {
+            content: "✓ ";
+            font-weight: bold;
+        }
+        
+        .items-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .items-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .items-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .note {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #0c5460;
+        }
+        
+        .map-link {
+            display: block;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .map-link:hover {
+            background: #5568d3;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 2026 목운초 아버지회</h1>
+            <p>가족 워크샵 (MT)</p>
+            <p style="font-size: 14px; margin-top: 10px;">5월 16일(토) ~ 17일(일) 1박 2일</p>
+        </div>
+
+        <!-- 기본 정보 -->
+        <div class="section">
+            <div class="section-title">기본 정보</div>
+            <div class="info-box">
+                <div class="info-row">
+                    <div class="info-label">📅 일시</div>
+                    <div class="info-value">2026년 5월 16일(토) ~ 17일(일)<br>1박 2일</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">📍 장소</div>
+                    <div class="info-value">크라운해태 연수원<br>경기 양주시 백석읍 권율로 721</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">👨‍👩‍👧‍👦 참가대상</div>
+                    <div class="info-value">가족 전체</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 지도 -->
+        <div class="section">
+            <div class="section-title">오시는 길</div>
+            <img src="https://www.genspark.ai/api/files/s/29OlaED4" alt="크라운해태연수원 조감도" class="map-image">
+            <a href="https://map.naver.com/p/search/크라운해태%20연수원" target="_blank" class="map-link">
+                🗺️ 네이버 지도에서 길찾기
+            </a>
+            <a href="https://map.kakao.com/link/search/크라운해태%20연수원" target="_blank" class="map-link" style="background: #FEE500; color: #000; margin-top: 10px;">
+                🗺️ 카카오맵에서 길찾기
+            </a>
+            
+            <div class="warning">
+                <div class="warning-title">🚗 주차 안내</div>
+                <div class="warning-text">
+                    <strong>당일치기 가족분들</strong>은 차량을 <strong>입구 양쪽</strong>에 주차해주세요.<br>
+                    (주차 공간: 총 50면)
+                </div>
+            </div>
+        </div>
+
+        <!-- 일정표 -->
+        <div class="section">
+            <div class="section-title">상세 일정</div>
+            
+            <div class="info-box" style="background: linear-gradient(135deg, #FFF5E1 0%, #FFE4B5 100%); border-left: 4px solid #D2691E;">
+                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <span style="font-size: 24px; margin-right: 10px;">☕</span>
+                    <h4 style="color: #8B4513; font-size: 16px; margin: 0;">커피차 지원 안내</h4>
+                </div>
+                <div style="color: #654321; font-size: 14px; line-height: 1.8;">
+                    <strong>오후 1시부터</strong> 운동장에서 <strong>커피와 간단한 다과</strong>를 제공합니다!<br>
+                    커피 드시면서 편하게 운동장으로 집합해주세요 😊<br>
+                    <div style="margin-top: 10px; padding: 8px; background: rgba(255,255,255,0.7); border-radius: 5px; text-align: center;">
+                        💝 <strong>김건우 총회장님</strong>께서 후원해주셨습니다. 감사합니다!
+                    </div>
+                </div>
+            </div>
+            
+            <div class="schedule">
+                <h3>🌞 1일차 (5월 16일 토요일)</h3>
+                <div class="time-slot">
+                    <span class="time">13:00</span>
+                    <span class="activity">입실 및 정비<br>
+                    ☕ 커피차 운영 - 운동장 집합<br>
+                    (김건우 총회장님 후원)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">14:00</span>
+                    <span class="activity">운동회 (야외 운동장)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">16:30</span>
+                    <span class="activity">개별 정비 (휴식 시간)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">17:00</span>
+                    <span class="activity">강당 활동<br>
+                    • 아이들: 에어바운스<br>
+                    • 부모님: 레크레이션 (경품 추첨/초대가수)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">19:00</span>
+                    <span class="activity">석식 (저녁 식사)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">20:00</span>
+                    <span class="activity">실내 영화 관람<br>
+                    (개별 자유시간 / 부모님 타임)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">22:00</span>
+                    <span class="activity">취침</span>
+                </div>
+            </div>
+
+            <div class="schedule" style="background: #d4edda; border-left-color: #28a745;">
+                <h3 style="color: #155724;">🌅 2일차 (5월 17일 일요일)</h3>
+                <div class="time-slot">
+                    <span class="time">08:00</span>
+                    <span class="activity">아침 식사</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">09:00</span>
+                    <span class="activity">체육 활동 (자율)</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">11:00</span>
+                    <span class="activity">정비 및 귀가</span>
+                </div>
+            </div>
+
+            <div class="note">
+                ※ 프로그램은 인원, 날씨 등에 따라 변동될 수 있습니다.
+            </div>
+        </div>
+
+        <!-- 준비물 -->
+        <div class="section">
+            <div class="section-title">준비물 안내</div>
+            <div class="info-box">
+                <h4 style="margin-bottom: 10px; color: #495057;">🎒 개인 준비물</h4>
+                <ul class="items-list">
+                    <li>여벌 옷</li>
+                    <li>여벌 수건</li>
+                    <li>드라이기</li>
+                    <li>세면도구 (치약, 칫솔, 세안제 등)</li>
+                </ul>
+            </div>
+            
+            <div class="info-box" style="background: #e7f3ff;">
+                <h4 style="margin-bottom: 10px; color: #0056b3;">🏨 연수원 비치 품목</h4>
+                <ul class="items-list">
+                    <li>샴푸</li>
+                    <li>바디워시</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 주의사항 -->
+        <div class="section">
+            <div class="section-title">⚠️ 주의사항</div>
+            
+            <div class="danger">
+                <div class="danger-title">🚫 객실 로비 안내</div>
+                <div class="danger-text">
+                    <strong>1층 로비</strong>에 전시된 장식품들은 <strong>매우 고가</strong>입니다.<br>
+                    아이들이 <strong>만지지 않도록</strong> 각별히 주의해주세요! 🙏
+                </div>
+            </div>
+
+            <div class="warning" style="margin-top: 15px;">
+                <div class="warning-title">👶 아이들 안전 관리</div>
+                <div class="warning-text">
+                    • 운동회 및 에어바운스 활동 시 부모님 동반 필수<br>
+                    • 복도 및 계단에서 뛰지 않기<br>
+                    • 안전요원 지시 사항 준수
+                </div>
+            </div>
+        </div>
+
+        <!-- MT부 조직 및 연락망 -->
+        <div class="section">
+            <div class="section-title">MT부 조직 및 연락망</div>
+            
+            <!-- 임원진 -->
+            <div class="contact-list">
+                <div class="contact-item">
+                    <div class="contact-name">👔 이상욱 MT부 회장 (총괄)</div>
+                    <div class="contact-phone">📞 010-8818-1557<br>1학년 4반 이시헌 아빠</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">👔 김정열 부회장</div>
+                    <div class="contact-phone">📞 010-5880-8970<br>1학년 3반 김유찬 아빠</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-name">👔 성종민 총무</div>
+                    <div class="contact-phone">📞 010-7738-2338<br>1학년 3반 성유준 아빠</div>
+                </div>
+            </div>
+
+            <!-- A팀 -->
+            <div class="team-card" style="border-left-color: #dc3545;">
+                <div class="team-header">
+                    <div class="team-name">🏨 A팀 (숙박·식사)</div>
+                    <div class="team-count" style="background: #dc3545;">3명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">박헌회 (박예린 아빠) 📞 010-8769-5600</div>
+                </div>
+                <div class="team-members">
+                    <div class="member-item">• 이수연 (이아린 아빠) 010-4004-2363</div>
+                    <div class="member-item">• 김병성 (김시은 아빠) 010-6767-9991</div>
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">숙박·식사 총괄 - 연수원 협의 및 계약 대관</div>
+                    <div class="task-item">객실 배정 - 사전 설문, 배정표 작성</div>
+                    <div class="task-item">식사 관리 - 식사 배치, 조식 관리</div>
+                    <div class="task-item">객실 청소 및 시설 관리</div>
+                </div>
+            </div>
+
+            <!-- B팀 -->
+            <div class="team-card" style="border-left-color: #28a745;">
+                <div class="team-header">
+                    <div class="team-name">📋 B팀 (출석·명찰·물품)</div>
+                    <div class="team-count" style="background: #28a745;">3명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">최상혁 (최서준 아빠) 📞 010-5858-8837</div>
+                </div>
+                <div class="team-members">
+                    <div class="member-item">• 우희식 (우지유 아빠) 010-7499-7564</div>
+                    <div class="member-item">• 김민석 (김서우 아빠) 010-5523-6137</div>
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">출석·팀 배분 - 출석 제도 및 명부 배부</div>
+                    <div class="task-item">정원/출석 배정 - 작 40가족</div>
+                    <div class="task-item">당일치기 가족 - 인원 관리</div>
+                    <div class="task-item">참석자 명단 관리</div>
+                </div>
+            </div>
+
+            <!-- C팀 -->
+            <div class="team-card" style="border-left-color: #007bff;">
+                <div class="team-header">
+                    <div class="team-name">💎 C팀 (에어바운스·안전)</div>
+                    <div class="team-count" style="background: #007bff;">5명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">강구원 (강무영 아빠) 📞 010-2735-3191</div>
+                </div>
+                <div class="team-members">
+                    <div class="member-item">• 조민 (조서안 아빠) 010-5100-0611</div>
+                    <div class="member-item">• 김민국 (김시온 아빠) 010-4906-9288</div>
+                    <div class="member-item">• 채대철 (채지율 아빠, 4학년 8반) 010-3729-7982</div>
+                    <div class="member-item">• 채은성 (채시웅 아빠) 010-8761-8401</div>
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">에어바운스 - 업체 선정</div>
+                    <div class="task-item">안전요원 4명 - 2교대 배치</div>
+                    <div class="task-item">물품 준비 및 안전사항 안내</div>
+                    <div class="task-item">응급 상황 대응</div>
+                </div>
+            </div>
+
+            <!-- D팀 -->
+            <div class="team-card" style="border-left-color: #fd7e14;">
+                <div class="team-header">
+                    <div class="team-name">⚽ D팀 (운동회·레크)</div>
+                    <div class="team-count" style="background: #fd7e14;">4명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">황태용 (황서준 아빠) 📞 010-4737-2805</div>
+                </div>
+                <div class="team-members">
+                    <div class="member-item">• 안우성 (안이준 아빠) 010-2887-0416</div>
+                    <div class="member-item">• 김형태 (김우진 아빠) 010-2216-9781</div>
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">운동회 레크 - MC 업체 섭외</div>
+                    <div class="task-item">운동 용품 - 대여 및 세팅</div>
+                    <div class="task-item">팀사 진행 - 지원 및 응원</div>
+                    <div class="task-item">레크레이션 재미 준비</div>
+                </div>
+            </div>
+
+            <!-- E팀 -->
+            <div class="team-card" style="border-left-color: #6f42c1;">
+                <div class="team-header">
+                    <div class="team-name">🎭 E팀 (부모님 프로그램)</div>
+                    <div class="team-count" style="background: #6f42c1;">1명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">김정열 (김유찬 아빠) 📞 010-5880-8970</div>
+                </div>
+                <div class="team-members">
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">부모님 프로그램 - 1부님 엄마 간담회</div>
+                    <div class="task-item">레크레이션 - 진행</div>
+                    <div class="task-item">초대가수 - 공연 준비 (30분)</div>
+                    <div class="task-item">부모님 참여 독려</div>
+                </div>
+            </div>
+
+            <!-- F팀 -->
+            <div class="team-card" style="border-left-color: #e83e8c;">
+                <div class="team-header">
+                    <div class="team-name">📸 F팀 (촬영·기록)</div>
+                    <div class="team-count" style="background: #e83e8c;">2명</div>
+                </div>
+                <div class="team-leader">
+                    <div class="leader-label">팀장</div>
+                    <div class="leader-info">김경민 (김민율 아빠) 📞 010-2774-5334</div>
+                </div>
+                <div class="team-members">
+                    <div class="member-item">• 진정환 (진시원 아빠) 010-8741-5659</div>
+                </div>
+                <div class="team-tasks">
+                    <div class="task-item">영상·카메라 - 카메라 운영</div>
+                    <div class="task-item">사진/영상 - 촬영 및 편집</div>
+                    <div class="task-item">영상 기록 및 편집</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 시설 정보 -->
+        <div class="section">
+            <div class="section-title">시설 정보</div>
+            <div class="info-box">
+                <h4 style="margin-bottom: 10px; color: #495057;">🏢 주요 시설</h4>
+                <ul class="items-list">
+                    <li><strong>강당</strong>: 107평 / 의자 121개</li>
+                    <li><strong>식당</strong>: 최대 174석</li>
+                    <li><strong>대강의실</strong>: 식당 위 4층 (술자리 가능)</li>
+                    <li><strong>운동장</strong>: 인조잔디 야외 운동장</li>
+                    <li><strong>주차장</strong>: 50면</li>
+                </ul>
+            </div>
+            
+            <div class="info-box" style="background: #fff3cd;">
+                <h4 style="margin-bottom: 10px; color: #856404;">🛏️ 객실 안내</h4>
+                <ul class="items-list">
+                    <li>온돌방: 4인실, 6인실, 12인실</li>
+                    <li>침대방: 2인실</li>
+                    <li>침구 추가: 22,000원/1인</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>2026 목운초등학교 아버지회 MT부</strong></p>
+            <p style="margin-top: 10px;">가족의 추억을 만드는 사람들</p>
+            <p style="margin-top: 15px; font-size: 13px; font-weight: bold; color: #495057;">
+                📞 문의사항은 각 팀장님 및 임원진에게 연락 주세요
+            </p>
+            <p style="margin-top: 8px; font-size: 12px;">
+                MT부 회장 이상욱 (010-8818-1557)<br>
+                부회장 김정열 (010-5880-8970)<br>
+                총무 성종민 (010-7738-2338)
+            </p>
+        </div>
+    </div>
+</body>
+</html>
