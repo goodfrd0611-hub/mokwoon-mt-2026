@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 목운초 아버지회 가족 워크샵 (MT)</title>
+    <title>2026 목운초 아버지회 가족 워크샵(MT)</title>
     <style>
         * {
             margin: 0;
@@ -12,15 +12,15 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Malgun Gothic', sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 10px;
+            padding: 20px;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -31,376 +31,202 @@
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 20px;
+            padding: 40px;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-            font-weight: 700;
-            line-height: 1.3;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         .header .subtitle {
-            font-size: 16px;
-            opacity: 0.95;
-            margin-top: 10px;
+            font-size: 1.2em;
+            opacity: 0.9;
         }
         
-        .welcome-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 30px 20px;
-            margin: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .welcome-section h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .welcome-section p {
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-        
-        .welcome-section .highlight {
+        .header .date {
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: bold;
             background: rgba(255,255,255,0.2);
             padding: 15px;
             border-radius: 10px;
-            margin: 15px 0;
-        }
-        
-        .video-section {
-            padding: 20px;
-            background: #f8f9fa;
-            margin: 20px;
-            border-radius: 15px;
-        }
-        
-        .video-section h3 {
-            text-align: center;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
-        
-        .video-section video {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: inline-block;
         }
         
         .content {
-            padding: 30px 20px;
+            padding: 40px;
         }
         
         .section {
             margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
         }
         
-        .section-title {
-            font-size: 22px;
+        .section h2 {
             color: #667eea;
+            font-size: 1.8em;
             margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            font-weight: 600;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
         }
         
         .info-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: white;
             padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .info-box h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .info-box p {
-            font-size: 15px;
-            line-height: 1.6;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .schedule-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .schedule-item .time {
-            font-weight: 700;
-            color: #667eea;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        
-        .schedule-item .activity {
-            color: #333;
-            font-size: 15px;
-        }
-        
-        .team-card {
             background: white;
-            border: 2px solid #e9ecef;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
         }
         
-        .team-card h4 {
+        .time {
+            font-weight: bold;
             color: #667eea;
-            font-size: 18px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            font-size: 1.1em;
         }
         
-        .team-member {
-            padding: 10px 0;
-            border-bottom: 1px solid #f1f3f5;
-        }
-        
-        .team-member:last-child {
-            border-bottom: none;
-        }
-        
-        .team-leader {
+        .contact-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .phone {
-            color: #667eea;
-            font-weight: 600;
-            margin-left: 10px;
-        }
-        
-        .alert-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin: 15px 0;
         }
         
-        .alert-box.danger {
-            background: #f8d7da;
-            border-left-color: #dc3545;
-        }
-        
-        .alert-box.info {
-            background: #d1ecf1;
-            border-left-color: #17a2b8;
-        }
-        
-        .alert-box.success {
-            background: #d4edda;
-            border-left-color: #28a745;
+        .contact-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
         
         .map-container {
-            width: 100%;
-            height: 300px;
-            border-radius: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        .badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            margin-right: 8px;
-            margin-bottom: 8px;
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
         }
         
-        .emergency-section {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .video-container {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        .emergency-section h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        
-        .emergency-icon {
-            width: 150px;
-            height: auto;
-            margin: 20px auto;
+        .video-container video {
+            width: 100%;
             display: block;
-            border-radius: 10px;
-        }
-        
-        .emergency-section .highlight-box {
-            background: rgba(255,255,255,0.2);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        
-        .emergency-detail {
-            background: white;
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        
-        .emergency-detail h4 {
-            color: #dc3545;
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .emergency-detail ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .emergency-detail ul li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .emergency-detail ul li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #dc3545;
-            font-weight: bold;
         }
         
         .gift-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
         }
         
         .gift-item {
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gift-item:hover {
+            transform: translateY(-5px);
         }
         
         .gift-item img {
             width: 100%;
-            height: 200px;
-            object-fit: contain;
+            height: auto;
             display: block;
-            background: #f8f9fa;
-            padding: 10px;
         }
         
         .gift-item .caption {
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .contact-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             padding: 15px;
-            border-radius: 10px;
             text-align: center;
+            font-weight: bold;
+            color: #667eea;
         }
         
-        .contact-card .title {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-        
-        .contact-card .name {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .contact-card .phone {
-            font-size: 15px;
-            color: white;
-        }
-        
-        .weather-section {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid #2196f3;
-        }
-        
-        .weather-section h4 {
-            color: #1976d2;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .weather-image {
+        .weather-img {
             width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            margin: 15px auto;
+            max-width: 500px;
             display: block;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        @media (max-width: 600px) {
+        .emergency-img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        ul li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 768px) {
             .header h1 {
-                font-size: 24px;
+                font-size: 1.8em;
             }
             
-            .section-title {
-                font-size: 20px;
+            .content {
+                padding: 20px;
             }
             
-            .gift-gallery {
-                grid-template-columns: 1fr;
-            }
-            
-            .emergency-icon {
-                width: 120px;
+            .section {
+                padding: 20px;
             }
         }
     </style>
@@ -408,552 +234,241 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎉 2026 목운초 아버지회<br>가족 워크샵 (MT) 🎉</h1>
-            <div class="subtitle">
-                <p>📅 2026년 5월 16일(토) ~ 17일(일) | 1박 2일</p>
-                <p>📍 크라운해태 연수원</p>
-            </div>
-        </div>
-
-        <!-- 환영 인사 섹션 -->
-        <div class="welcome-section">
-            <h2>💝 환영합니다! 💝</h2>
-            <p><strong>이번 MT는 1학년 MT부 아버님들과 함께 안전하고 즐겁게 보내실 수 있도록 최선을 다해 준비했습니다.</strong></p>
-            
-            <div class="highlight">
-                <p><strong>🎁 푸짐한 경품이 준비되어 있습니다!</strong></p>
-                <p>• <strong>스타벅스 상품권, 올리브영 상품권, 축구공, 배드민턴세트, 줄넘기</strong> 등 다양한 경품!</p>
-                <p>• <strong>응원상</strong> (목소리 큰 아이), <strong>승리팀 MVP</strong>, <strong>졌잘싸(졌지만 잘싸운) MVP</strong> 등 많은 상들이 있음</p>
-                <p>• <strong>엄마들 번호표 추첨</strong>, <strong>엄마들 응원상</strong>, <strong>엄마들 현장 게임</strong> 등</p>
-                <p style="margin-top: 10px;">💡 다양한 상품과 재미있는 게임이 준비되어 있으니 적극적으로 참여해주세요! 🎉</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>🎉 참여하시는 분들께 부탁드립니다</strong></p>
-                <p>• MT 당일에는 준비는 신경 쓰지 마시고 <strong>마음껏 즐겨 주세요!</strong></p>
-                <p>• 1학년 MT부 아버님들이 처음 준비하는 행사인 만큼, 현장에서 <strong>따뜻한 칭찬과 격려</strong> 부탁드립니다.</p>
-                <p>• 부족한 부분이 있더라도 <strong>다 같이 즐기는 분위기</strong>로 함께 만들어가면 좋겠습니다 😊</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>👕 MT부 티셔츠 안내</strong></p>
-                <p>• MT 준비위원들은 <strong>검정색 티셔츠</strong>를 착용하고 있습니다</p>
-                <p>• 궁금한 사항이나 도움이 필요하시면 <strong>검정 티셔츠를 입은 아버님</strong>께 편하게 문의해주세요!</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>🎁 선물 및 명찰 배부 안내</strong></p>
-                <p>• <strong>방키(방 배정) 시:</strong> 명찰 제공 (명찰 즉시 아이 옷 앞면에 부착, QR코드 포함)</p>
-                <p>• <strong>운동장 행사 마감 전:</strong> 아이들 과자 만들기 세트 + MT 답례품 (자수 수건 + 핸드워시) 일괄 배부</p>
-                <p>• 배부 시간을 놓치신 분은 <strong>MT부 아버님</strong>께 연락 주시면 전달해드립니다</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>⏰ 방키(방 배정) 일정 안내</strong></p>
-                <p>• <strong>1차 명찰 및 방키 배포: 13:00~14:00</strong> - 본관 1층 로비에서 진행</p>
-                <p>• <strong>2차 방키: 16:30 이후</strong> - 지속적으로 진행</p>
-                <p>• <strong>14:00 이후 도착</strong>하시는 분들은 <strong>바로 운동장</strong>으로 와주세요!</p>
-                <p>• 일정에 맞춰 움직여주시면 행사 진행에 큰 도움이 됩니다 🙏</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>🏃 적극적인 참여 부탁드립니다!</strong></p>
-                <p>• 휴식 시간을 제외하고는 <strong>건강하신 아버님들</strong>께서 일정에 적극 참여해주시면 감사하겠습니다</p>
-                <p>• 운동회, 레크레이션, 에어바운스 등 <strong>가족과 함께 즐기는 시간</strong>을 만들어가요! 💪</p>
-            </div>
-            
-            <p style="margin-top: 20px; text-align: center; font-size: 16px;"><strong>가족 모두 건강하게 만나 뵙겠습니다! 🙌</strong></p>
-            <p style="text-align: center; margin-top: 10px;">MT부 회장 이상욱</p>
-        </div>
-
-        <!-- 홍보 영상 섹션 -->
-        <div class="video-section">
-            <h3>🎬 MT 홍보 영상 - 주제가 "너뿐이야" 🎬</h3>
-            <video controls preload="metadata" style="max-height: 500px;">
-                <source src="https://www.genspark.ai/api/files/s/lTQONmc2?token=Z0FBQUFBQnFCYjY0N1VIX3lVMkl1bHFwbkxOZUJHU0Z5TUpIcC1ZYVFERUZHQkpJVzI2dGpoTUxEbmkzdG5jNHlrWHZmSlBCaERWZW9HVXJsd1NqenFYbENuYWppQUJBQ3N2ckNkWHJGSkRvdldxcE1Pa0RORWtobVN6MUp3Wk44b2pobWlnZlFTeU5NTExRUm9oTjVxSGhMdjd2aXR2TVEzakpNSHJtenE5QzNiQ242TmhDUndRelBfU3JIanhPcEhZdXJkb0Q1Y3lsdVk0dWRRUXBNY2lXX0d5RWFxU05DeGd1VXlraV9FYlRMb1RiTW0wUWRFQUJtcV9RV1hwVzJpLXlyTXNvNGZ6QTRiREZpMTFqSHhJc3I2dE1NakxNeFE9PQ" type="video/mp4">
-                영상을 재생할 수 없습니다.
-            </video>
-        </div>
-
-        <!-- 긴급 의료 지원 섹션 -->
-        <div class="emergency-section">
-            <h3>🚑 긴급 의료 지원 안내 🚑</h3>
-            <img src="https://www.genspark.ai/api/files/s/waBtGJ5Q?token=Z0FBQUFBQnFCYjY0N1phS3hDeEFpbUVhcmdNNW95TDhNbnVtdlVmY1RKRW5LdV9UWVJtT09aUHRrRDNobVczSWs0WmI4cmtLN0VTWTc5UVFQbjZRT0NNc0JsSUpSZkY2ajZzVkxfbl9lY1NuZm9qMFRxWnhPM2didDRHb0lsd0FWQWNfcEZIb1ZNTTc2UlZOcTBRblpuODNMWFhnamp6dndXX3E5TGNTejBia3dkejl6T0h2Nk42VlY0Rkk4NDFPZFFMS2FuTEkwSUhCSmgwWWhMXzhhSzZwMWVEMW1MQjcxRGh0b29tLUJRc3ZPTEd3M2tYNnlNa2xyTVdJNlRVa0Y5c0tITG03Y242TUdBTzE2MGFrME93T2tDTnJNZmx2dXc9PQ" alt="앰뷸런스" class="emergency-icon">
-            
-            <div class="emergency-detail">
-                <h4>📋 행사 개요</h4>
-                <ul>
-                    <li><strong>행사 장소:</strong> 해태크라운 연수원 (양주)</li>
-                    <li><strong>행사 일정:</strong> 토요일 ~ 야간 프로그램 포함</li>
-                    <li><strong>참가 인원:</strong> 약 200명 (학부모 및 아동)</li>
-                </ul>
-                <p style="margin-top: 10px;">행사 기간 동안 참가자 안전을 위해 응급의료 대응 체계를 운영합니다.</p>
-            </div>
-            
-            <div class="emergency-detail">
-                <h4>🏥 현장 의료 운영</h4>
-                <p><strong>운영 시간:</strong> 토요일 행사 시작 ~ 오후 11시까지</p>
-                <p style="margin-top: 10px;"><strong>현장 배치:</strong></p>
-                <ul>
-                    <li>앰뷸런스 1대 상시 대기</li>
-                    <li>응급구조사 2명 현장 상주</li>
-                    <li><strong>운동회 시간(14:00~16:30):</strong> 운동장 인근 배치</li>
-                    <li><strong>그 외 시간:</strong> 주차장 메인 자리 배치</li>
-                </ul>
-                
-                <p style="margin-top: 15px;"><strong>현장 의료지원 가능 범위:</strong></p>
-                <ul>
-                    <li>기본 응급처치</li>
-                    <li>외상 및 찰과상 처치</li>
-                    <li>활력징후 확인</li>
-                    <li>응급환자 초기 대응</li>
-                    <li>필요 시 응급실 이송 연계</li>
-                </ul>
-                <p style="margin-top: 10px; color: #dc3545;">※ 중증 환자 발생 시 즉시 119 및 인근 응급의료기관으로 이송합니다.</p>
-            </div>
-            
-            <div class="emergency-detail">
-                <h4>⚠️ 응급상황 발생 시 행동 요령</h4>
-                <p>아래 상황 발생 시 즉시 의료팀 또는 진행요원에게 알려주시기 바랍니다.</p>
-                <ul>
-                    <li>의식 저하</li>
-                    <li>심한 두통 또는 흉통</li>
-                    <li>호흡곤란</li>
-                    <li>경련</li>
-                    <li>심한 출혈</li>
-                    <li>골절 의심</li>
-                    <li>머리 부상 후 구토/졸림</li>
-                    <li>고열 또는 심한 알레르기 반응</li>
-                    <li>어린이 낙상 및 외상</li>
-                </ul>
-            </div>
-            
-            <div class="emergency-detail">
-                <h4>🚨 응급 대응 체계</h4>
-                <p><strong>현장 처치 가능:</strong></p>
-                <ul>
-                    <li>단순 찰과상</li>
-                    <li>경미한 타박상 및 염좌</li>
-                    <li>단순 어지럼증</li>
-                    <li>경미한 복통 및 두통</li>
-                </ul>
-                
-                <p style="margin-top: 15px;"><strong>즉시 병원 이송:</strong></p>
-                <ul>
-                    <li>의식 변화</li>
-                    <li>호흡 이상</li>
-                    <li>심한 외상</li>
-                    <li>지속적인 구토</li>
-                    <li>심한 알레르기 반응</li>
-                    <li>중증 소아 환자</li>
-                </ul>
-            </div>
-            
-            <div class="emergency-detail">
-                <h4>🏥 인근 응급의료기관</h4>
-                <ul>
-                    <li>의정부성모병원 응급실</li>
-                    <li>의정부을지대학교병원 응급실</li>
-                    <li>경기도의료원 의정부병원</li>
-                </ul>
-                <p style="margin-top: 10px;">※ 상황에 따라 가장 적절한 의료기관으로 이송됩니다.</p>
-            </div>
-            
-            <div class="emergency-detail">
-                <h4>✅ 참가자 안전수칙</h4>
-                <p><strong>어린이 안전:</strong></p>
-                <ul>
-                    <li>보호자 동반 원칙 유지</li>
-                    <li>야간 단독 이동 금지</li>
-                    <li>계단 및 야외 활동 시 주의</li>
-                </ul>
-                
-                <p style="margin-top: 15px;"><strong>음주 관련 주의:</strong></p>
-                <ul>
-                    <li>과도한 음주 자제</li>
-                    <li>음주 후 뛰거나 장난 금지</li>
-                    <li>어지럼증 발생 시 즉시 휴식</li>
-                </ul>
-                
-                <p style="margin-top: 15px;"><strong>야간 이동:</strong></p>
-                <ul>
-                    <li>미끄럼 및 낙상 주의</li>
-                    <li>이동 시 주변 조명 확인</li>
-                    <li>필요 시 진행요원 도움 요청</li>
-                </ul>
-            </div>
-            
-            <div class="highlight-box" style="text-align: center; margin-top: 20px;">
-                <p style="font-size: 15px;">
-                    💡 다치거나 아프신 분이 있으시면 즉시 <strong>검정 티셔츠를 입은 MT부 아버님</strong>께 알려주세요!
-                </p>
-                <p style="margin-top: 10px; font-size: 14px;">
-                    모든 참가자분들의 안전한 행사 진행을 위해 적극적인 협조 부탁드립니다.
-                </p>
-            </div>
+            <h1>🎉 2026 목운초 아버지회 🎉</h1>
+            <div class="subtitle">가족 워크샵(MT)</div>
+            <div class="date">📅 2026년 5월 16일(토) ~ 17일(일) 1박 2일</div>
+            <div class="subtitle" style="margin-top: 20px;">📍 크라운해태 연수원</div>
+            <div class="subtitle">경기 양주시 백석읍 권율로 721</div>
         </div>
 
         <div class="content">
-            <!-- 기본 정보 -->
             <div class="section">
-                <h2 class="section-title">📋 기본 정보</h2>
+                <h2>🎁 환영합니다!</h2>
                 <div class="info-box">
-                    <h3>📅 일시</h3>
-                    <p>2026년 5월 16일(토) ~ 17일(일) | 1박 2일</p>
+                    <h3>🏆 경품 안내</h3>
+                    <ul>
+                        <li>스타벅스 아메리카노 2잔권 x 3개</li>
+                        <li>올리브영 상품권 1만원 x 3개</li>
+                        <li>축구공, 배드민턴 세트, 줄넘기 외 다수</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 20px;">📛 명찰 및 배지 착용 안내</h3>
+                    <p style="margin: 10px 0;">• 체크인 시 가족 번호가 적힌 명찰을 받으시게 됩니다</p>
+                    <p style="margin: 10px 0;">• 명찰에는 <span class="highlight">가족별 QR코드</span>가 포함되어 있어 본 페이지로 바로 접속 가능합니다</p>
+                    <p style="margin: 10px 0;">• 행사 기간 중 명찰을 착용해 주시면 원활한 진행에 도움이 됩니다</p>
                 </div>
+            </div>
+
+            <div class="section">
+                <h2>🚑 응급의료 지원</h2>
+                <img src="https://www.genspark.ai/api/files/s/E44BZOnN?token=Z0FBQUFBQnFCbmU2SWpxRzhpRy1sa1UzM01xc1dQdXZlUER3MXlkWWRtNjVFSFpXbzVmTmxaNnA0aWM2dFAxd1c4dnI5YlNBTzR1dGF1NGJyeTV1Z0VHd2N1VmFYNFRYRlZUdWpITWhYekpzd1ZrVlB6V3NaUE10T0xBd2UzZjI4Y2NTQnVLMWlzbHZXcjMzZHdKYW9scThjWWVoWlNQZzJrX0x6WmJzVnhrdHZ6c01pMzVPRDBFZFp6dnpGTThYbW0yZlY2OEhiSXQ0WGVTUERTM0FnX0g2YW4xVkJuSzZ6ZzFDRmY2blpXaWFrVENWdkRzN21fSkk5dE5aRHRDZnhHaTBfdTA0c0VnUEJsTzVVeHNNY0FwUERsTDNtejk1dmc9PQ" alt="응급의료 지원" class="emergency-img">
                 <div class="info-box">
-                    <h3>📍 장소</h3>
+                    <h3>현장 의료진 배치</h3>
+                    <ul>
+                        <li><strong>간호사:</strong> 1학년 4반 최서준 어머니 (간호학과 교수)</li>
+                        <li><strong>응급구조사:</strong> 1학년 4반 박예린 아버지</li>
+                        <li><strong>운영시간:</strong> 토요일 13:00 ~ 일요일 11:00 (24시간 대기)</li>
+                        <li><strong>비상연락:</strong> MT부 회장 이상욱 (010-8818-1557)</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 20px;">인근 응급의료기관</h3>
+                    <ul>
+                        <li><strong>양주세브란스병원 응급실:</strong> 031-840-9119 (차량 7분)</li>
+                        <li><strong>양주 다나병원 응급실:</strong> 031-840-0112 (차량 10분)</li>
+                        <li><strong>119 구급:</strong> 119</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px; padding: 10px; background: #fff3cd; border-radius: 5px;">
+                        <strong>📌 응급상황 발생 시:</strong><br>
+                        1) 현장 의료진에게 즉시 연락<br>
+                        2) MT부 회장에게 보고<br>
+                        3) 필요시 119 또는 인근 병원 이송
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌤️ 날씨 정보</h2>
+                <img src="https://www.genspark.ai/api/files/s/sPyYMbB0?token=Z0FBQUFBQnFCbmU2cE1qY3B0MW5fUlZLRWtVYmc2c1VEX0FfQW9WTjNONFpPa3JxbmdRcVFSU2ZnZXhmekdnbjVwVG9uUjlvSG11SDZWZEI4VWZEM0tZbE5iSHlhQWwxdmdhSW5IeGNfQmNqUi01Y3ZOVV9lV1FHNWp1c1hNOEYxUmpXQlJWYmtUeVN5VUJvX3ZkQlotWGNidko4RXFEdG9tT3RjYUJFZEQyeDgtVUdhSFZzZ1A1dkRtdlNicHR0bVlhOGJzN25QU19hSkVxNlVIUzJkMTNmZWFuZHFLekFHQTllSV9sVnhLaDRpTExqV3JGV05BODZZSmZxV0lvQ3cya3BZa0djWnZ4QTk0YlpnOWw0YjVWb2RZakg3ZG1GUXc9PQ" alt="양주 토요일 날씨" class="weather-img">
+                <div class="info-box">
+                    <h3>준비물 체크리스트 (날씨 고려)</h3>
+                    <ul>
+                        <li>☀️ 햇빛 대비: 선크림, 모자, 선글라스</li>
+                        <li>🧥 체온 조절: 얇은 겉옷 (아침/저녁 쌀쌀)</li>
+                        <li>👟 운동화 필수 (운동회 참가용)</li>
+                        <li>🌂 우산/우비 (혹시 모를 소나기 대비)</li>
+                        <li>💧 개인 텀블러 (수분 보충)</li>
+                        <li>🏃 운동복 착용 권장</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎬 홍보 영상</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="https://www.genspark.ai/api/files/s/zfJ5lzI3?token=Z0FBQUFBQnFCbmU2Vll5WkVYbC14OXZwRjd0R054MXRZZktDeGlJTFlQSkpKcUczeFJwUFo4STlsbksyOWFLLXdDSUFPamtITXg5c3hRQ1B5NDBfemxBODZfdnZta1FpenI3WUNETUczZ2hWbGN1OWQxakpZSDF3cVBrZDVOYXlNZnA3SFBtV0N5d041SG9kYk5JRHlfZDNGb09GZzVPNVRVNHNWUFBDMUpqbkRxMk84ZTRaOFFGT3ZFdTFOb2RXYjVmV3h2WF9aR3pKVWVGRDAzdTNJN2NqYzRXNjJGNnRUbWRPVkItanJTbGNvdzRraXlmVmRwTDZfd0Y3LTFxaFRVMHdfRU9UamtNWUI5N2poMll0NGVrMllnUDVPSHhmdGc9PQ" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📍 오시는 길</h2>
+                <div class="info-box">
                     <p><strong>크라운해태 연수원</strong></p>
                     <p>경기 양주시 백석읍 권율로 721</p>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.123456789!2d127.0123456!3d37.812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM!5e0!3m2!1sko!2skr!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                    <p>전화: 031-829-3663</p>
                 </div>
-                <div class="info-box">
-                    <h3>👨‍👩‍👧‍👦 참가대상</h3>
-                    <p>가족 전체 (65가족 내외 / 총 인원 약 200명)</p>
-                </div>
-                <div class="alert-box info">
-                    <p><strong>🚗 주차 안내</strong></p>
-                    <p>주차장 50면 이용 가능 | 당일치기 가족은 입구 양쪽에 주차</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.123456789!2d127.045678!3d37.823456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM1LCsDQ5JzI0LjQiTiAxMjfCsDAyJzQ0LjQiRQ!5e0!3m2!1sko!2skr!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
 
-            <!-- 날씨 안내 -->
             <div class="section">
-                <h2 class="section-title">☀️ 날씨 안내 및 준비물</h2>
-                <div class="weather-section">
-                    <h4>🌡️ 5월 16일(토) 양주 날씨 예보</h4>
-                    <img src="https://www.genspark.ai/api/files/s/xloIpeNU?token=Z0FBQUFBQnFCYjY0WUM2cFRMRnNXOUZOQ3hRQzJRNkRaYlFsdWdISlRZX2Jjcy1GMlQydUktbF85RTdfSGVTRGJhLW1CRzFwUi1YYmg2bnd2WFpYYy1WOUE1eDJMREg3UkhSMTVTSUJmZjhycDlCN214U0lJRnlKN1RpS3lOZGtfYzRyQzg5N2RGYWRLN0MyRGcwTXlFai04RHhEcGtYRmRpQ0NnWGFDQjh6RmhmNmwxRlg3NmlGNDIzU3h3YTNfUU9BVFE3NWZLcGFLUHZQa1owNHhoSFdQdURoZlhkbzdiZjJCYU5TLUtxM3g5WXNobWtvSGJDQnU3ZDdGaDZaUGlGQVVGdDctaXVmTld6S08tb05qQ2dRNUxIV1VNZzRVbUE9PQ" alt="양주 토요일 날씨" class="weather-image">
-                    
-                    <p style="margin-top: 15px;"><strong>🌞 낮 시간 (최고 기온 약 30도):</strong></p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>✅ 반팔, 반바지 착용 권장</li>
-                        <li>✅ 썬크림 필수</li>
-                        <li>✅ 모자, 선글라스 준비</li>
-                        <li>✅ 물병 지참 (수분 보충)</li>
-                    </ul>
-                    
-                    <p style="margin-top: 15px;"><strong>🌙 아침·저녁 시간 (고도가 높은 지대):</strong></p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>✅ 바람막이 준비</li>
-                        <li>✅ 긴팔 옷 지참</li>
-                        <li>✅ 바람 불면 쌀쌀할 수 있으니 겉옷 필수</li>
-                    </ul>
-                    
-                    <p style="margin-top: 15px;"><strong>💦 물놀이 준비:</strong></p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>✅ 개인 물총 지참 가능 (선택사항)</li>
-                        <li>✅ 여벌 옷 넉넉히 준비</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 상세 일정 -->
-            <div class="section">
-                <h2 class="section-title">📆 상세 일정</h2>
+                <h2>📋 상세 일정</h2>
                 
-                <div class="alert-box success">
-                    <h3 style="margin-bottom: 10px;">☕ 커피차 지원 안내</h3>
-                    <p><strong>오후 1시부터</strong> 운동장에서 <strong>커피와 간단한 다과</strong>를 제공합니다!</p>
-                    <p>커피 드시면서 편하게 운동장으로 집합해주세요 😊</p>
-                    <p style="margin-top: 10px;">💝 <strong>김건우 총회장님</strong>께서 후원해주셨습니다. 감사합니다!</p>
-                </div>
-
-                <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 20px;">🌞 1일차 (5월 16일 토요일)</h3>
-                
+                <h3>🌅 1일차 (5월 16일 토요일)</h3>
                 <div class="schedule-item">
                     <div class="time">13:00</div>
-                    <div class="activity">
-                        <strong>입실 및 정비 + 방키(방 배정)</strong><br>
-                        ☕ 커피차 운영 - 운동장 집합 (김건우 총회장님 후원)<br>
-                        📍 1차 명찰 및 방키 배포: 본관 1층 로비에서 진행 (13:00~14:00)
-                    </div>
+                    <div>집합 및 방배정 (1차 방열쇠 배부)</div>
                 </div>
-
                 <div class="schedule-item">
-                    <div class="time">14:00</div>
-                    <div class="activity">
-                        <strong>운동회 (야외 운동장)</strong><br>
-                        전문 MC 진행 | 공굴리기, 줄다리기, 이어달리기 등<br>
-                        💡 14:00 이후 도착하시는 분들은 바로 운동장으로!<br>
-                        🚑 앰뷸런스 운동장 인근 배치
-                    </div>
+                    <div class="time">14:00 ~ 16:00</div>
+                    <div>체육행사 (인조잔디 운동장)<br>
+                    - 공굴리기, 줄다리기, 이어달리기 등</div>
                 </div>
-
                 <div class="schedule-item">
                     <div class="time">16:30</div>
-                    <div class="activity">
-                        <strong>개별 정비 (휴식 시간)</strong><br>
-                        📍 2차 방키: 16:30 이후 지속 진행
-                    </div>
+                    <div>2차 방열쇠 배부 (샤워 및 휴식)</div>
                 </div>
-
                 <div class="schedule-item">
-                    <div class="time">17:00</div>
-                    <div class="activity">
-                        <strong>강당 활동</strong><br>
-                        • 아이들: 에어바운스<br>
-                        • 부모님: 레크레이션 (경품 추첨/초대가수)
-                    </div>
+                    <div class="time">17:00 ~ 19:00</div>
+                    <div>강당 행사<br>
+                    - 에어바운스<br>
+                    - 실내 레크리에이션</div>
                 </div>
-
                 <div class="schedule-item">
-                    <div class="time">19:00</div>
-                    <div class="activity">
-                        <strong>석식 (저녁 식사)</strong><br>
-                        • 식사 가능 시간: 19:00~21:00 (2시간)<br>
-                        • 식사 후 <strong>식당 & 대강의실</strong>(같은 건물)에서 간단한 안주류와 주류 제공<br>
-                        • <strong>부모님 야식 시간</strong> - 새벽까지 가능 🍻<br>
-                        • 편하게 담소 나누시며 즐거운 시간 보내세요!
-                    </div>
+                    <div class="time">19:00 ~ 21:00</div>
+                    <div>저녁식사<br>
+                    - 식당 이용<br>
+                    - 야식 제공 (치킨, 피자 등)</div>
                 </div>
-
                 <div class="schedule-item">
-                    <div class="time">20:00</div>
-                    <div class="activity">
-                        <strong>실내 영화 관람 (강당)</strong><br>
-                        • 아이들 대상 영화 상영<br>
-                        • 부모님들은 식당/대강의실에서 자유시간 가능
-                    </div>
+                    <div class="time">20:00 ~ 22:00</div>
+                    <div>강당 영화상영 (어린이 영화)<br>
+                    부모님 간담회 (별도 공간)</div>
                 </div>
-
                 <div class="schedule-item">
                     <div class="time">22:00</div>
-                    <div class="activity"><strong>취침</strong></div>
+                    <div>취침</div>
                 </div>
 
-                <h3 style="color: #667eea; margin: 30px 0 15px 0; font-size: 20px;">🌅 2일차 (5월 17일 일요일)</h3>
-
+                <h3 style="margin-top: 30px;">🌄 2일차 (5월 17일 일요일)</h3>
                 <div class="schedule-item">
-                    <div class="time">07:00</div>
-                    <div class="activity"><strong>아침 식사 시작</strong><br>07:00~09:00 자유롭게 이용 가능</div>
+                    <div class="time">07:00 ~ 08:30</div>
+                    <div>조식</div>
                 </div>
-
                 <div class="schedule-item">
-                    <div class="time">09:00</div>
-                    <div class="activity"><strong>체육 활동 (자율)</strong><br>운동장에서 자유롭게 활동</div>
+                    <div class="time">09:00 ~ 11:00</div>
+                    <div>자율 레크리에이션<br>
+                    - 운동장 축구<br>
+                    - 에어바운스<br>
+                    - 산책 등</div>
                 </div>
-
+                <div class="schedule-item">
+                    <div class="time">10:30</div>
+                    <div>📸 단체 사진 촬영</div>
+                </div>
                 <div class="schedule-item">
                     <div class="time">11:00</div>
-                    <div class="activity"><strong>정비 및 귀가</strong></div>
-                </div>
-
-                <div class="alert-box">
-                    <p>※ 프로그램은 인원, 날씨 등에 따라 변동될 수 있습니다.</p>
+                    <div>퇴소</div>
                 </div>
             </div>
 
-            <!-- MT부 티셔츠 갤러리 -->
             <div class="section">
-                <h2 class="section-title">👕 MT부 티셔츠</h2>
-                <p style="margin-bottom: 15px;">MT 준비위원들은 아래 검정 티셔츠를 착용하고 있습니다. 궁금한 사항은 편하게 물어보세요!</p>
+                <h2>🎁 답례품 갤러리</h2>
                 <div class="gift-gallery">
                     <div class="gift-item">
-                        <img src="https://www.genspark.ai/api/files/s/T3ZFWZQK?token=Z0FBQUFBQnFCYjY0c0VzdEtqLXJYNDlRNTRzUU5UZi1UU01IVndoTE1xQ2EtSHRmYTRsaW5XbmhMZVNQWW1oLTJvVnBZalA1aGhRb1FuUjV0ZVVQTjBuZTZQamUxZ3NwZG5UTDMwUUI1Zzdqcmp6amJFT1VJbU5uN29vODNUb2ZDbXAxMDlzY3RRTU4tdDM3WGFyYmVrMWYzbU1lUzdsTzNaZFhCTWlWRnhVTE5uUF80NDlzd0hHdjBtRnY5TVIzcklRN0tJMzZXVVhEbGxYNG93Ui1QT0xkMjZWMncwa2pzQ2N1RjBVWk5KRmNDUm11SjZjSFh0MFZ5eVY3ZzB1UmpUX2FmNVJxejJ2M2RObGFmQnRTWWJNY2pVdWFGdTVraXc9PQ" alt="MT부 티셔츠 앞면">
-                        <div class="caption">티셔츠 앞면</div>
+                        <img src="https://www.genspark.ai/api/files/s/N3HHqjFB?token=Z0FBQUFBQnFCbmV6WHMtSTJweVkzQVRzRlljaExQamlVQVRCTmhWNGUtUzBlYjdCaEtGRU5UTzdqYXpzOWpKcDN2LVdQcjlaa0hiZEJJMTFYc05WQWNvcUdzbmNOcDE4UU4wMkR1WUtqTFpibFR1U1NBLUNqcUpxUlVwX3ZjU0Q5RVV1NDFOQTNtYVY2V2I0MlVYYnF5UEIxd3lMVU9HRERFcTNHa3NzTzFaWUNTcHpJWjQ3ZXc1ZXNUWkZNUG4yVm5NZGtOUk1YOEN2MWhWYzZyQ2VpY2tzTlBuRmlYWWhWOUlPMXBIRjBvY2VPTDZMLThlNjE1UXFEMnVoQ0ZtQ0lOUmdrRzlUM1AwOHcwckdKWFFvZ3dNUzViWDJDQXhRaEE9PQ" alt="MT 티셔츠 앞면">
+                        <div class="caption">MT 티셔츠 (앞면)</div>
                     </div>
                     <div class="gift-item">
-                        <img src="https://www.genspark.ai/api/files/s/dYDldVc2?token=Z0FBQUFBQnFCYjY0X21TY19yWHNjbDlqU2xhVVpmOS1ENDM5R1Zma2NfRDRLN3B3NGZwU2puRHJjNVFWRnRuOUtHQnFVZG04S1htTXVWaVdaZzlOZVNDbTJOWmFtRVVzTGp6M01xNXFfVnJUZ0lmd2JtUTgycllCM3liU0RsWlhfUjVWeHR3QUF1bERKSG1XNVFqbW5KMk56Qkc2NDhKRHJ6eXJGYzFtWnNObTBlV3N3UU5aSXhESVlER0M2YnlzQWhBOE1GanBCOWZ4b09kYUdLdUNWR2dZRWJRbXcwY2tPY05YbktiaVBoc3VLTC0xbkpuWEdZNXlITVZoUWkxR2xsMUljTlA0WUpYcDduNW1JYU5CNXlYVzlnMWMyeTNHWUE9PQ" alt="MT부 티셔츠 뒷면">
-                        <div class="caption">티셔츠 뒷면</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MT 선물 안내 -->
-            <div class="section">
-                <h2 class="section-title">🎁 MT 선물 세트 안내</h2>
-                <p style="margin-bottom: 15px;">모든 참가 가족께 아래 선물 세트를 함께 나눠드립니다!</p>
-                <div class="gift-gallery">
-                    <div class="gift-item">
-                        <img src="https://www.genspark.ai/api/files/s/IFteIYKa?token=Z0FBQUFBQnFCYjY0YmF4bWNNX2tBbjhleWFQTy00QXJGdlJaZ2ozZFY1NW1rTURRd3l6U3dlaHpFYk5sWUdzbDBKVERwVXlIa21rV2ozS0FEVGM0N1M2dnRWWXNOS3ZQVUR3UmY0a1l6bm92ZWttRnhQWU51X01VMXNhbmZlUXBrNFZxWVM4STZ5UE16bzVWTGhsUEg0RlRCbGVkb2E0R0IteDRBZnBNanVxdXNfR3diX001ZkplTUFjRzNTTFhLNDBlU2F2M3ZEeE01ejlXeFF1M0V6UC1lSkF6dlBBc1pHaUtvZ3pZOUhxU2RhbTVidDN0dHlSU3Y0RnV1MHZKaTllRDhrcDZ2WmUyME82dkNjYWNETExldk1FTmxTbDg4WkE9PQ" alt="아이들 과자 만들기 세트">
-                        <div class="caption">아이들 과자 만들기 세트</div>
+                        <img src="https://www.genspark.ai/api/files/s/BU14JeYw?token=Z0FBQUFBQnFCbmU2UzNpUXI3X1JFbVBSallXX0FlYlZuYjFMRVZKTWJkX0h0cU93SWFXUkx0dHBudUlYaFhCY1MwYnhaTkdSWHg0QjhtdURsNktEd2hvYkVUOFo1aUtDdE1YUWljV0s5bDljRFFqcXlwOFVud3hqWlFvQnZ1UlZtYTBfWmtDcUozOXhmOEIyb0Z0Z0dMaXVOYzNwVEsyYU0tZmpjcGZUUzJUYW02OUI5RFVsUTBXYXdTa1FzVklHM3UycnhUQkVZQlpPdDVXNE5lNmhFU2hNb2UxUC1CLUVYVEEtWHByc2JPaFlob25FUzhxc0hURUZQTHZFQnhZOEhiUTZuY196ZklEZzhPMWZEd3BVV3dpRk1hQ0Z5bFVBOFE9PQ" alt="MT 티셔츠 뒷면">
+                        <div class="caption">MT 티셔츠 (뒷면)</div>
                     </div>
                     <div class="gift-item">
-                        <img src="https://www.genspark.ai/api/files/s/ECTnZ7sm?token=Z0FBQUFBQnFCYjY0b3FDQVZOemJiRUcxdGM3TEhxbU5fcjA5Z2JvX3RhZGthUjV6UHRKa3ltakdsVUQ4bTB4djFnMzhSV3ZXYm8xWk02eUF0ZmtGYXpqSkVTNkcwM2duTEp5REN2OHJtUVhFT0d3NmsxazJELThITVBacWZGMFNzWjhpUHlaZFU1b3NMQlRlQlB1aEhSMnMtNW9SVHMtSWxZRU9CREU4M1BPMFVNdHRIbl9kVjV4OUc2ZC15NWNBVDZVZ19peWxOYlV4emFZc2p0UmNzY1poMnAwMEhOaXJ0VlV2N2U0eHp1b3gzLVVCMFNVUG9TRUE2dVlfMDBINHpsTEVuRExhYktKLVlLWVhzOHRxVThVZUhETGRDaTRMVGc9PQ" alt="MT 답례품">
-                        <div class="caption">MT 답례품 (자수 수건 + 핸드워시)</div>
+                        <img src="https://www.genspark.ai/api/files/s/913OA4l1?token=Z0FBQUFBQnFCbmU2UDVEZDFPcHFoa2doOWpNMFdSbFM2NW1EcGpjU29nMlpZb0xwcTN2aFBwZXluRVZrcDhDaXdkSTdQTkVWTnNLQVhVcjY5WWRZU0g5UnlBdUR3WWpTSkJ2dmNUVTkyMTh5VnRMYVN0ZEdtWHJjNHVfYkZOSWEweXFQMWZPekNWX01kenJCREZ5RS13U0syaGdtdkVITGpWcHMxaFBKN09BTjRkQ2VCcVM1WTZXekZTYjFaaGNqX2E3bk0tR0RtWGlBR054Y2dQbVV0WXA3ekd4eW5rclZNNlpHX3JUYkJST2hUZHZOQTdYLVVzMDRGdVo4RllkNlZ0LS1fNVhzOEpqQ0hqblpCcmRQOWdwLUhPbWR4YlR0VGc9PQ" alt="어린이 과자 만들기 세트">
+                        <div class="caption">어린이 과자 만들기 세트</div>
                     </div>
-                </div>
-                <div class="alert-box success" style="margin-top: 15px;">
-                    <p><strong>배부 시간:</strong> 방키(방 배정) 시간 또는 운동장 전체 집합 시</p>
-                    <p><strong>배부 장소:</strong> 본관 1층 로비 / 운동장</p>
-                    <p><strong>구성:</strong></p>
-                    <p>① 아이들 과자 만들기 세트 (체험 키트)</p>
-                    <p>② MT 답례품 (자수 수건 + 핸드워시)</p>
-                    <p style="margin-top: 10px;">배부 시간을 놓치신 분은 검정 티셔츠를 입은 MT부 아버님께 연락 주세요!</p>
+                    <div class="gift-item">
+                        <img src="https://www.genspark.ai/api/files/s/PmNANTtN?token=Z0FBQUFBQnFCbmU2eC1GUURHclA1dDVZVF8tQ1ZHVXpMU1ducTZ6RTBtY3lnSk92T1hfb3c5ZlJlYzFsTTFtY2NBZnBFcDlueEw2SWZWLU1MdTc5QXFyNHNaT1BpVUhPSUwyUkl1WW8zcFlyck1KTVBRVmVxRkRVS1RiQzIzTFNZZ3N5c0ZUcHlmOXpyMzk4SS1MaHM0bWF0TTE5cm4zU19XZlNydGhfOFdwVXBFZDVPMTRQWlZ6NS1LdFJVV2NQai1lSXM3bUNUSWZFY3hHVDJFOXVwU3lXNk1jWFZDYmQ0QVBxWi1IM0Y1a3BRTHZJeWRTalhNdUtudUc1eWVOLUZ1NUNfUkdSZk5yWkZxdWM5dHBNbFgxT0Njdm8xd3N3b3c9PQ" alt="MT 답례품 세트">
+                        <div class="caption">MT 답례품 세트</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- 준비물 안내 -->
             <div class="section">
-                <h2 class="section-title">🎒 준비물 안내</h2>
+                <h2>👥 조편성 및 연락처</h2>
                 
-                <div class="team-card">
-                    <h4>개인 준비물</h4>
-                    <p><span class="badge">여벌 옷</span><span class="badge">여벌 수건</span><span class="badge">드라이기</span><span class="badge">세면도구</span><span class="badge">반팔/반바지</span><span class="badge">긴팔/바람막이</span><span class="badge">썬크림</span><span class="badge">모자</span><span class="badge">선글라스</span><span class="badge">개인 물총(선택)</span></p>
-                    <p style="margin-top: 10px; color: #666;">치약, 칫솔, 세안제 등</p>
+                <h3>🎯 조별 팀장</h3>
+                <div class="contact-card">
+                    <h4>A조 팀장</h4>
+                    <p>김민석 (1학년 1반 김서우 아빠)</p>
+                    <p>📞 010-5523-6137</p>
+                </div>
+                <div class="contact-card">
+                    <h4>B조 팀장</h4>
+                    <p>윤창근 (1학년 2반 윤세아 아빠)</p>
+                    <p>📞 010-4894-2907</p>
+                </div>
+                <div class="contact-card">
+                    <h4>C조 팀장</h4>
+                    <p>김정열 (1학년 3반 김윤찬 아빠)</p>
+                    <p>📞 010-5880-8970</p>
+                </div>
+                <div class="contact-card">
+                    <h4>D조 팀장</h4>
+                    <p>김경민 (1학년 4반 김민율 아빠)</p>
+                    <p>📞 010-2774-5334</p>
                 </div>
 
-                <div class="team-card">
-                    <h4>연수원 비치 품목</h4>
-                    <p><span class="badge">샴푸</span><span class="badge">바디워시</span></p>
+                <h3 style="margin-top: 30px;">🎪 MT부 임원진</h3>
+                <div class="contact-card">
+                    <h4>MT부 회장</h4>
+                    <p>이상욱 (1학년 4반 이시헌 아빠)</p>
+                    <p>📞 010-8818-1557</p>
+                </div>
+                <div class="contact-card">
+                    <h4>MT부 부회장</h4>
+                    <p>김정열 (1학년 3반 김윤찬 아빠)</p>
+                    <p>📞 010-5880-8970</p>
+                </div>
+                <div class="contact-card">
+                    <h4>회계</h4>
+                    <p>성종민 (1학년 3반 성유준 아빠)</p>
+                    <p>📞 010-7738-2338</p>
                 </div>
             </div>
 
-            <!-- 주의사항 -->
             <div class="section">
-                <h2 class="section-title">⚠️ 주의사항</h2>
-                
-                <div class="alert-box danger">
-                    <h3 style="margin-bottom: 10px;">🚫 객실 로비 안내</h3>
-                    <p><strong>1층 로비</strong>에 전시된 장식품들은 <strong>매우 고가</strong>입니다.</p>
-                    <p>아이들이 <strong>만지지 않도록</strong> 각별히 주의해주세요! 🙏</p>
-                </div>
-
-                <div class="alert-box">
-                    <h3 style="margin-bottom: 10px;">👶 아이들 안전 관리</h3>
-                    <p>• 운동회 및 에어바운스 활동 시 부모님 동반 필수</p>
-                    <p>• 복도 및 계단에서 뛰지 않기</p>
-                    <p>• 안전요원 지시 사항 준수</p>
+                <h2>🏢 시설 정보</h2>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>강당:</strong> 107평 (의자 121개)</li>
+                        <li><strong>식당:</strong> 174석</li>
+                        <li><strong>주차장:</strong> 50대 수용</li>
+                        <li><strong>객실:</strong> 가족별 독립 배정 (샤워실, 화장실 포함)</li>
+                        <li><strong>운동장:</strong> 인조잔디 축구장</li>
+                        <li><strong>부대시설:</strong> 매점, 와이파이</li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- MT부 조직 및 연락망 -->
-            <div class="section">
-                <h2 class="section-title">👥 MT부 조직 및 연락망</h2>
-
-                <!-- A팀 -->
-                <div class="team-card">
-                    <h4>🏠 A팀 - 숙박·식사</h4>
-                    <div class="team-leader">
-                        팀장: 박헌회 (박예린 아빠) <span class="phone" style="color: white;">📞 010-8769-5600</span>
-                    </div>
-                    <div class="team-member">• 이수연 (이아린 아빠) 010-4004-2363</div>
-                    <div class="team-member">• 김병성 (김시은 아빠) 010-6767-9991</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        숙박·식사 총괄 | 연수원 협의 및 계약 대관 | 객실 배정 | 식사 관리 | 객실 청소 및 시설 관리
-                    </p>
-                </div>
-
-                <!-- B팀 -->
-                <div class="team-card">
-                    <h4>📋 B팀 - 출석·명찰·물품</h4>
-                    <div class="team-leader">
-                        팀장: 최상혁 (최서준 아빠) <span class="phone" style="color: white;">📞 010-5858-8837</span>
-                    </div>
-                    <div class="team-member">• 우희식 (우지유 아빠) 010-7499-7564</div>
-                    <div class="team-member">• 김민석 (김서우 아빠) 010-5523-6137</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        출석·팀 배분 | 정원/출석 배정 (65가족 내외) | 당일치기 가족 인원 관리 | 참석자 명단 관리
-                    </p>
-                </div>
-
-                <!-- C팀 -->
-                <div class="team-card">
-                    <h4>🛍️ C팀 - 필요 용품 준비</h4>
-                    <div class="team-leader">
-                        팀장: 강구원 (강무영 아빠) <span class="phone" style="color: white;">📞 010-2735-3191</span>
-                    </div>
-                    <div class="team-member">• 조민 (조서안 아빠) 010-5100-0611</div>
-                    <div class="team-member">• 김민국 (김시온 아빠) 010-4906-9288</div>
-                    <div class="team-member">• 채대철 (채지율 아빠) 010-3729-7982</div>
-                    <div class="team-member">• 채은성 (채시웅 아빠) 010-8761-8401</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        필요 용품 준비 (다과, 음료, 각종 용품 등) | 물품 배치 및 관리 | 현장 물품 지원
-                    </p>
-                </div>
-
-                <!-- D팀 -->
-                <div class="team-card">
-                    <h4>⚽ D팀 - 운동회·레크·에어바운스</h4>
-                    <div class="team-leader">
-                        팀장: 황태용 (황서준 아빠) <span class="phone" style="color: white;">📞 010-4737-2805</span>
-                    </div>
-                    <div class="team-member">• 안우성 (안이준 아빠) 010-2887-0416</div>
-                    <div class="team-member">• 김형태 (김우진 아빠) 010-2216-9781</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        운동회 레크 MC 업체 섭외 | 운동 용품 대여 및 세팅 | 에어바운스 업체 선정 | 안전요원 4명 (2교대 배치) | 물품 준비 및 안전사항 안내 | 응급 상황 대응
-                    </p>
-                </div>
-
-                <!-- E팀 -->
-                <div class="team-card">
-                    <h4>👨‍👩‍👧 E팀 - 부모 프로그램</h4>
-                    <div class="team-leader">
-                        팀장: 김정열 (김유찬 아빠) <span class="phone" style="color: white;">📞 010-5880-8970</span>
-                    </div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        부모님 프로그램 (1부님 엄마 간담회) | 레크레이션 진행 | 초대가수 공연 준비 (30분) | 부모님 참여 독려
-                    </p>
-                </div>
-
-                <!-- F팀 -->
-                <div class="team-card">
-                    <h4>📸 F팀 - 촬영·기록</h4>
-                    <div class="team-leader">
-                        팀장: 김경민 (김민율 아빠) <span class="phone" style="color: white;">📞 010-2774-5334</span>
-                    </div>
-                    <div class="team-member">• 진정환 (진시원 아빠) 010-8741-5659</div>
-                    <div class="team-member">• 임동환 (임수현 아빠) 010-9995-0171</div>
-                    <p style="margin-top: 10px; color: #666; font-size: 14px;">
-                        영상·카메라 운영 | 사진/영상 촬영 및 편집 | 영상 기록 및 편집
-                    </p>
-                </div>
-            </div>
-
-            <!-- 임원진 연락처 -->
-            <div class="section">
-                <h2 class="section-title">📞 임원진 연락처</h2>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="title">MT부 회장</div>
-                        <div class="name">이상욱</div>
-                        <div class="phone">📞 010-8818-1557</div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="title">MT부 부회장</div>
-                        <div class="name">김정열</div>
-                        <div class="phone">📞 010-5880-8970</div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="title">MT부 총무</div>
-                        <div class="name">성종민</div>
-                        <div class="phone">📞 010-7738-2338</div>
-                    </div>
-                </div>
-                <div class="alert-box info" style="margin-top: 20px;">
-                    <p><strong>💡 문의 안내</strong></p>
-                    <p>궁금한 사항이 있으시면 위 임원진 또는 각 팀장님께 연락 주세요!</p>
-                    <p>현장에서는 검정 티셔츠를 입은 MT부 아버님께 편하게 물어보세요 😊</p>
-                </div>
-            </div>
-
-            <!-- 시설 정보 -->
-            <div class="section">
-                <h2 class="section-title">🏢 시설 정보</h2>
-                
-                <div class="team-card">
-                    <h4>주요 시설</h4>
-                    <div class="team-member">• <strong>강당:</strong> 107평 / 의자 121개</div>
-                    <div class="team-member">• <strong>식당:</strong> 최대 174석</div>
-                    <div class="team-member">• <strong>대강의실:</strong> 식당 위 4층 (술자리 가능)</div>
-                    <div class="team-member">• <strong>운동장:</strong> 인조잔디 야외 운동장</div>
-                    <div class="team-member">• <strong>주차장:</strong> 50면</div>
-                </div>
-
-                <div class="team-card">
-                    <h4>객실 안내</h4>
-                    <div class="team-member">• <strong>온돌방:</strong> 4인실, 6인실, 12인실</div>
-                    <div class="team-member">• <strong>침대방:</strong> 2인실</div>
-                </div>
-            </div>
-
         </div>
 
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px 20px; text-align: center;">
-            <p style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">🎉 즐거운 MT 되시길 바랍니다! 🎉</p>
-            <p style="font-size: 14px; opacity: 0.9;">2026 목운초 아버지회 MT부 일동</p>
+        <div class="footer">
+            <p>🎉 즐겁고 안전한 MT가 되도록 최선을 다하겠습니다! 🎉</p>
+            <p style="margin-top: 15px;">문의: MT부 회장 이상욱 010-8818-1557</p>
         </div>
     </div>
 </body>
